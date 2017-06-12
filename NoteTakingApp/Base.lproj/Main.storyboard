@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Q5N-B6-K3m">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Note-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NoteTakingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iC6-LC-8RI">
+                                <rect key="frame" x="16" y="93" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A2V-B4-gKi">
+                                <rect key="frame" x="16" y="131" width="343" height="223"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4s-2i-IrH">
+                                <rect key="frame" x="16" y="573" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3CQ-Bc-d8r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="ADD LOCATION"/>
+                                <connections>
+                                    <action selector="btnLocationClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n8R-Gs-bQi"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="e5M-k1-YqD">
+                                <rect key="frame" x="16" y="362" width="343" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="MW0-gk-g0g"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.08883667529" green="0.1204386122" blue="0.54697725789999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="iC6-LC-8RI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="0Re-P4-7zP"/>
+                            <constraint firstItem="y4s-2i-IrH" firstAttribute="top" secondItem="e5M-k1-YqD" secondAttribute="bottom" constant="8" id="1Pk-sd-5sD"/>
+                            <constraint firstItem="iC6-LC-8RI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="2mJ-fi-FAj"/>
+                            <constraint firstItem="e5M-k1-YqD" firstAttribute="top" secondItem="A2V-B4-gKi" secondAttribute="bottom" constant="8" symbolic="YES" id="4IT-bX-57O"/>
+                            <constraint firstItem="A2V-B4-gKi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4jv-iF-7Vh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e5M-k1-YqD" secondAttribute="bottom" constant="58" id="5bz-4G-Hwg"/>
+                            <constraint firstItem="e5M-k1-YqD" firstAttribute="trailing" secondItem="y4s-2i-IrH" secondAttribute="trailing" id="6KM-T1-Ebk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e5M-k1-YqD" secondAttribute="bottom" constant="58" id="BlG-BE-r4C"/>
+                            <constraint firstItem="iC6-LC-8RI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GzQ-dk-rOQ"/>
+                            <constraint firstItem="A2V-B4-gKi" firstAttribute="trailing" secondItem="iC6-LC-8RI" secondAttribute="trailing" id="IBi-v5-4fw"/>
+                            <constraint firstItem="e5M-k1-YqD" firstAttribute="top" secondItem="A2V-B4-gKi" secondAttribute="bottom" constant="8" id="Nu5-WF-x2U"/>
+                            <constraint firstItem="e5M-k1-YqD" firstAttribute="leading" secondItem="y4s-2i-IrH" secondAttribute="leading" id="OhX-QV-Zuh"/>
+                            <constraint firstItem="y4s-2i-IrH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PUf-pR-pMS"/>
+                            <constraint firstItem="A2V-B4-gKi" firstAttribute="top" secondItem="iC6-LC-8RI" secondAttribute="bottom" constant="8" id="Rn1-i2-UMv"/>
+                            <constraint firstItem="A2V-B4-gKi" firstAttribute="leading" secondItem="e5M-k1-YqD" secondAttribute="leading" id="SZv-Td-O5K"/>
+                            <constraint firstItem="A2V-B4-gKi" firstAttribute="top" secondItem="iC6-LC-8RI" secondAttribute="bottom" constant="8" id="TH4-6n-T2Y"/>
+                            <constraint firstItem="e5M-k1-YqD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Tjw-GI-VVE"/>
+                            <constraint firstItem="y4s-2i-IrH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VXN-XF-I2O"/>
+                            <constraint firstItem="e5M-k1-YqD" firstAttribute="top" secondItem="A2V-B4-gKi" secondAttribute="bottom" constant="8" id="WIg-jq-plJ"/>
+                            <constraint firstItem="A2V-B4-gKi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WKM-wV-dRB"/>
+                            <constraint firstItem="A2V-B4-gKi" firstAttribute="trailing" secondItem="e5M-k1-YqD" secondAttribute="trailing" id="Y3c-Oe-lvy"/>
+                            <constraint firstItem="A2V-B4-gKi" firstAttribute="leading" secondItem="iC6-LC-8RI" secondAttribute="leading" id="YaK-UC-R8Y"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y4s-2i-IrH" secondAttribute="bottom" id="egN-RI-wNL"/>
+                            <constraint firstItem="A2V-B4-gKi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hPF-vr-MfU"/>
+                            <constraint firstItem="e5M-k1-YqD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jje-yD-JKa"/>
+                            <constraint firstItem="y4s-2i-IrH" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="lWq-K4-o4V"/>
+                            <constraint firstItem="e5M-k1-YqD" firstAttribute="top" secondItem="A2V-B4-gKi" secondAttribute="bottom" constant="8" id="pFA-Er-rnJ"/>
+                            <constraint firstItem="A2V-B4-gKi" firstAttribute="top" secondItem="iC6-LC-8RI" secondAttribute="bottom" constant="8" id="qpL-rn-8pD"/>
+                            <constraint firstItem="A2V-B4-gKi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="uud-TJ-qex"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Add Note" id="6uR-Wz-iWW">
+                        <leftBarButtonItems>
+                            <barButtonItem systemItem="cancel" id="Wno-Oc-93V">
+                                <connections>
+                                    <action selector="btnCancel:" destination="BYZ-38-t0r" id="p7I-SM-fui"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Library" id="kod-x5-Vsp">
+                                <connections>
+                                    <action selector="btnLibraryClicked:" destination="BYZ-38-t0r" id="wbk-HP-Fm0"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="save" id="v6a-dQ-D4p">
+                                <connections>
+                                    <action selector="btnSave:" destination="BYZ-38-t0r" id="EUO-Up-sR4"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="camera" id="DiH-y4-alt">
+                                <connections>
+                                    <action selector="btnCameraClicked:" destination="BYZ-38-t0r" id="iai-dF-FiK"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnCamera" destination="DiH-y4-alt" id="8b3-PN-rnd"/>
+                        <outlet property="btnLibrary" destination="kod-x5-Vsp" id="uUT-cX-r47"/>
+                        <outlet property="btnLocation" destination="y4s-2i-IrH" id="gdT-0y-366"/>
+                        <outlet property="imgMap" destination="e5M-k1-YqD" id="iwA-Rm-d5I"/>
+                        <outlet property="imgview" destination="A2V-B4-gKi" id="4Jd-Vb-xS8"/>
+                        <outlet property="txtName" destination="iC6-LC-8RI" id="uIp-nT-QmH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="-1433.433283358321"/>
+        </scene>
+        <!--Note List-->
+        <scene sceneID="kPu-kQ-A9G">
+            <objects>
+                <tableViewController id="xpz-5q-Ek5" customClass="TableViewController" customModule="NoteTakingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yXl-7x-w3N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="WRE-0J-rPI">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WRE-0J-rPI" id="5ke-eV-NMf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xpz-5q-Ek5" id="6yF-xG-V1l"/>
+                            <outlet property="delegate" destination="xpz-5q-Ek5" id="6IC-Jx-5Gk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Note List" id="Frn-mk-c3g">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="RdQ-F8-Zpi">
+                            <connections>
+                                <action selector="btnEditClicked:" destination="xpz-5q-Ek5" id="EIa-XM-YTk"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aGh-Yd-5na">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="Add" id="Q3E-Kk-xrp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tblData" destination="yXl-7x-w3N" id="jW6-Rp-uiv"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="Edit" id="rhW-nM-Dz2"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j0C-7o-vqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034" y="-1433"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aW6-Aq-xoJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q5N-B6-K3m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NQE-fy-are">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xpz-5q-Ek5" kind="relationship" relationship="rootViewController" id="ktU-ws-g1f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZR-Ec-p6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="-1433"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="rhW-nM-Dz2"/>
+    </inferredMetricsTieBreakers>
+</document>
